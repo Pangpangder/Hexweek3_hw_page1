@@ -1,0 +1,678 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: 'Noto Sans TC','Roboto', sans-serif;
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+
+/*navbar區塊*/
+.bg-r{
+   background-color: #aa0601;
+}
+.navbar{
+    padding: 16px 0px;
+    @media(max-width:375px){
+       padding-bottom: 0px;
+    }
+}
+.navbar-logo{
+    display: block;
+    width: 80px;
+    @media(max-width:375px){
+       margin-bottom: 15px;
+       margin-left: 15px;
+    }
+}
+a{
+    text-decoration: none;
+}
+.container-nav{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 12px;
+
+     @media(max-width:768px){
+        max-width: 720px;
+     }
+
+     @media(max-width:375px){
+        max-width: 372px;
+        padding-left: 0px;
+        padding-right: 0px;
+     }
+}
+.navbar-wrap{
+    display: flex;
+    justify-content: space-between;
+    
+
+    @media(max-width:375px){
+        flex-direction: column;
+    }
+}
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    @media(max-width:375px){
+       flex-wrap: wrap;
+    }
+}
+.navbar-item{
+    margin-right: 64px;
+    @media(max-width:375px){
+      margin-right: 0px;
+      width: 50%;
+      text-align: center;
+      border: 1px solid #fff;
+      padding:12px 0px;
+    }
+}
+.navbar-link{
+    color: #fff;
+    font-size: 20px;
+}
+
+/*banner區塊*/
+.banner{
+    padding: 296px 0px;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+    background-size: cover; /* 讓圖片填滿整個容器，若圖片太小，可能因拉伸而造成失真。 */
+    @media(max-width:768px){
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+    }
+    @media(max-width:375px){
+        padding: 144px 0px;
+    }
+}
+.container-banner{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+     @media(max-width:768px){
+        max-width: 720px;
+     }
+
+     @media(max-width:375px){
+        max-width: 372px;
+     }
+}
+.container-banner p{
+    color: #650300;
+    font-size: 36px;
+    @media(max-width:375px){
+      font-size: 16px;
+    }
+}
+.container-banner h2{
+    color: #650300;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    @media(max-width:375px){
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+}
+.container-banner a{
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    width: 104px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #aa0601;
+    text-align: center;
+}
+.mr-0{
+    margin-right: 0px;
+}
+
+/* service區塊 */
+.service{
+    background-color: #fbf2f2;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media(max-width:375px){
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.container-service{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width:768px){
+       max-width: 720px;
+    }
+    @media(max-width:375px){
+        max-width: 372px;
+    }
+}
+.service-text{
+    color: #650300;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+.service-card{
+    display: flex;
+    margin-left: -12px;/*消除item最左及最右的padding*/
+    margin-right: -12px;
+    @media(max-width:768px){
+        flex-wrap: wrap;
+    }
+}
+.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 12px;
+    width: 25%;
+    @media(max-width:768px){
+      width: 50%;
+    }
+    @media(max-width: 375px){
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+.mb-0{
+    margin-bottom: 0px !important;
+}
+.service-item h3{
+    font-size: 24px;
+    font-weight: bold;
+    color:#650300;
+}
+
+/* classic區塊 */
+.classic{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media(max-width:375px){
+        padding-top: 40px;
+        padding-bottom: 40px;
+   }
+}
+.classic-container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(max-width:768px){
+        max-width: 720px;
+    }
+    @media(max-width:375px){
+         max-width: 372px;
+    }
+}
+.classic-container h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 48px;
+    @media(max-width:375px){
+        font-size: 24px;
+        margin-bottom: 24px;
+   }
+}
+.glasses-type{
+    display: flex;
+    margin-left: -12px;
+    margin-right: -12px;
+    @media(max-width:768px){
+        flex-direction: column;
+        align-items: center;
+    }    
+}
+.glasses-item{
+    padding: 0px 12px;
+    @media(max-width:768px){
+        width: 50%;
+        margin-bottom: 24px;
+      } 
+    @media(max-width:375px){
+        width: 100%;
+    } 
+}
+.glasses-text{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 900;
+    color: #aa0601;
+    text-align: center;
+}
+.mb-8{
+    margin-bottom: 8px;
+}
+
+/*designed區塊*/
+.designed{
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+    background-size:cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media(max-width:768px){
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-md.png?raw=true);
+     }
+    @media(max-width:375px){
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    } 
+}
+.container-designed{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding:0px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(max-width:768px){
+       max-width:720px;
+    }
+    @media(max-width:375px){
+       max-width: 372px;
+    }
+}
+.designed-glasses{
+    display: flex;
+    @media(max-width:768px){
+      flex-wrap: wrap;
+    }
+}
+.container-designed h2{
+   font-size: 48px;
+   font-weight: bold;
+   color: #ffffff;
+   margin-bottom: 48px;
+   @media(max-width:375px){
+     margin-bottom: 24px;
+   }
+}
+.designed-text{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-size: 48px;
+    color: #aa0601;
+    background-color: #fff;
+    text-align: center;
+    padding: 8px 0px;
+}
+.designed-item{
+    @media(max-width:768px){
+      width: 100%;
+    }
+}
+.mb-md-24{
+    @media(max-width:768px){
+        margin-bottom: 24px;
+      }
+}
+.home-section4-1-sm{
+    @media(max-width:375px){
+        content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true);
+      }
+}
+.home-section4-2-sm{
+    @media(max-width:375px){
+        content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true);
+      }
+}
+.br-1{
+    border-right:1px solid gray ;
+    @media(max-width:768px){
+        border-right: 0px;
+      }
+}
+/* recommend區塊 */
+.recommend{
+    padding: 80px 0px;
+    @media(max-width:375px){
+        padding: 40px 0px;
+    }
+}
+.container-recommend{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(max-width:768px){
+      max-width: 720px;
+    }
+    @media(max-width:375px){
+        max-width: 372px;
+    }
+}
+.customer-card{
+    display: flex;
+    margin: 0px -12px;
+    @media(max-width:768px){
+        flex-wrap: wrap;
+    }
+}
+.comment{
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+.recommend-head{
+    font-size: 48px;
+    font-weight: bold;
+    color: #650300;
+    margin-bottom: 48px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fc-70{
+    color: #707070;
+}
+.plr12{
+    padding: 0px 12px;
+    @media(max-width:768px){
+        width: 50%;
+    }
+    @media(max-width:375px){
+        width:100%;
+    }
+}
+.customer-item{
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px #00000029;
+}
+.md-mb-24{
+    @media(max-width:768px){
+        margin-bottom: 24px;
+    }
+}
+.sm-mb-16{
+    @media(max-width:375px){
+        margin-bottom: 16px;
+    }
+}
+/* 表單區塊 */
+.contact{
+    background-color: #fbf2f2;
+    padding: 80px 0px;
+}
+.container-contact{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 12px;
+    display: flex;
+    justify-content: center;
+    @media(max-width:768px){
+        max-width: 720px;
+    }
+      @media(max-width:375px){
+        max-width: 372px;
+    }
+}
+.contact-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @media(max-width:768px){
+        width: 75%;
+    }
+    @media(max-width:375px){
+        width: 100%;
+    }
+}
+.as-center{
+    align-self: center;
+}
+.contact-header{
+    font-size: 48px;
+    color:#650300;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.mb-24{
+    margin-bottom:24px;
+}
+.mb-16{
+    margin-bottom: 16px;
+}
+.h-36{
+    height:36px;
+}
+.h-33{
+    height: 33px;
+}
+.h-136{
+    height: 136px;
+}
+.check{
+   display: flex;
+}
+.send{
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    background-color: #aa0601;
+    width: 416px;
+    text-align: center;
+    align-self: center;
+    padding: 16px 0px;
+    @media(max-width:768px){
+      width: 336px;
+    }
+    @media(max-width:375px){
+        width: 100%;
+    }
+}
+.send:hover{
+    background-color: #650300;
+}
+.mb-48{
+    margin-bottom: 48px;
+}
+
+/* footer區塊 */
+.footer{
+    background-color: #aa0601;
+    padding-top: 48px;
+}
+.container-footer{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+    @media(max-width:768px){
+        max-width: 720px;
+    }
+      @media(max-width:375px){
+        max-width: 372px;
+    }
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+.tab{
+    display: flex;
+    align-items: center;
+}
+.social-icon{
+    display: flex;
+}
+.wh-48{
+    width: 48px;
+    height: 48px;
+}
+.mr-32{
+    margin-right: 32px;
+}
+.fc-w{
+   color:#fff; 
+}
+.mr-48{
+    margin-right: 48px;
+}
+.changeble-rwd{
+   display: flex;
+   flex-direction: column;
+   @media(max-width:375px){
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+   }
+}
+.fs-36{
+    font-size: 36px;
+}
+.contact-item{
+    display: flex;
+    align-items: center;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mid{
+    padding-bottom: 32px;
+    border-bottom: 1px solid #fff;
+    @media(max-width:375px){
+        border-bottom: 0px;
+    }
+}
+.down{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0px;
+    @media(max-width:768px){
+        padding-bottom: 40px;
+    }
+    @media(max-width:375px){
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
+}
+.policy{
+    display: flex;
+    @media(max-width:375px){
+        flex-direction: column;
+    }
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+}
+.wh-40{
+    @media(max-width:768px){
+      width: 40px;
+      height: 40px;
+    }
+}
+.md-mr-16{
+    @media(max-width:768px){
+        margin-right: 16px;
+    }
+}
+.tab{
+    @media(max-width:375px){
+      display: none;
+    }
+}
+.sm-wh-24{
+    @media(max-width:375px){
+        width: 24px;
+        height: 24px;
+    }
+    
+}
+.sm-fs-16{
+    @media(max-width:375px){
+        font-size: 16px;
+    }
+}
+.sm-mr-8{
+    @media(max-width:375px){
+        margin-right: 8px;
+    }
+}
+.sm-mb-8{
+    @media(max-width:375px){
+        margin-bottom: 8px;
+    }
+}
