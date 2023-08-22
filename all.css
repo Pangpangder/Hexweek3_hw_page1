@@ -63,17 +63,24 @@ img{
 }
 .navbar{
     padding: 16px 0px;
-    @media(max-width:375px){
+    @media(max-width:768px){
        padding-bottom: 0px;
     }
+    /* @media(max-width:375px){
+       padding-bottom: 0px;
+    } */
 }
 .navbar-logo{
     display: block;
     width: 80px;
-    @media(max-width:375px){
+    @media(max-width:768px){
+        margin-bottom: 15px;
+        margin-left: 15px;
+     }
+    /* @media(max-width:375px){
        margin-bottom: 15px;
        margin-left: 15px;
-    }
+    } */
 }
 a{
     text-decoration: none;
@@ -84,40 +91,58 @@ a{
     padding: 0px 12px;
 
      @media(max-width:768px){
-        max-width: 720px;
-     }
-
-     @media(max-width:375px){
-        max-width: 372px;
+        max-width: 768px;
         padding-left: 0px;
         padding-right: 0px;
      }
+
+     /* @media(max-width:375px){
+        max-width: 375px;
+        padding-left: 0px;
+        padding-right: 0px;
+     } */
 }
 .navbar-wrap{
     display: flex;
     justify-content: space-between;
     
-
-    @media(max-width:375px){
+    @media(max-width:768px){
         flex-direction: column;
     }
+    /* @media(max-width:375px){
+        flex-direction: column;
+    } */
 }
 .navbar-nav{
     display: flex;
     align-items: center;
-    @media(max-width:375px){
+    @media(max-width:768px){
        flex-wrap: wrap;
     }
+    /* @media(max-width:375px){
+       flex-wrap: wrap;
+    } */
 }
 .navbar-item{
     margin-right: 64px;
-    @media(max-width:375px){
+    @media(max-width:768px){
+        margin-right: 0px;
+        width: 50%;
+        text-align: center;
+        border: 1px solid #fff;
+        padding:12px 0px;
+      }
+    /* @media(max-width:375px){
       margin-right: 0px;
       width: 50%;
       text-align: center;
       border: 1px solid #fff;
       padding:12px 0px;
-    }
+    } */
+}
+.navbar-item a{
+    text-decoration: none;
+    display: block;
 }
 .navbar-link{
     color: #fff;
@@ -212,6 +237,9 @@ a{
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 32px;
+    @media(max-width:375px){
+       font-size: 24px;
+    }
 }
 .service-card{
     display: flex;
@@ -281,14 +309,14 @@ a{
     display: flex;
     margin-left: -12px;
     margin-right: -12px;
-    @media(max-width:768px){
+    @media(max-width:993px){
         flex-direction: column;
         align-items: center;
     }    
 }
 .glasses-item{
     padding: 0px 12px;
-    @media(max-width:768px){
+    @media(max-width:993px){
         width: 50%;
         margin-bottom: 24px;
       } 
@@ -545,7 +573,9 @@ a{
 .mb-48{
     margin-bottom: 48px;
 }
-
+textarea{
+    resize:none
+}
 /* footer區塊 */
 .footer{
     background-color: #aa0601;
@@ -571,6 +601,9 @@ a{
 .tab{
     display: flex;
     align-items: center;
+    @media(max-width:375px){
+        display: none;
+    }
 }
 .social-icon{
     display: flex;
@@ -649,11 +682,6 @@ a{
         margin-right: 16px;
     }
 }
-.tab{
-    @media(max-width:375px){
-      display: none;
-    }
-}
 .sm-wh-24{
     @media(max-width:375px){
         width: 24px;
@@ -683,3 +711,4 @@ a{
        font-size: 24px;
     }
 }
+
