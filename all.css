@@ -276,7 +276,7 @@ a{
 .classic{
     padding-top: 80px;
     padding-bottom: 80px;
-    @media(max-width:375px){
+    @media(max-width:576px){
         padding-top: 40px;
         padding-bottom: 40px;
    }
@@ -300,7 +300,7 @@ a{
     font-weight: bold;
     color: #650300;
     margin-bottom: 48px;
-    @media(max-width:375px){
+    @media(max-width:576px){
         font-size: 24px;
         margin-bottom: 24px;
    }
@@ -320,7 +320,7 @@ a{
         width: 50%;
         margin-bottom: 24px;
       } 
-    @media(max-width:375px){
+    @media(max-width:576px){
         width: 100%;
     } 
 }
@@ -601,7 +601,7 @@ textarea{
 .tab{
     display: flex;
     align-items: center;
-    @media(max-width:375px){
+    @media(max-width:768px){
         display: none;
     }
 }
@@ -624,7 +624,7 @@ textarea{
 .changeble-rwd{
    display: flex;
    flex-direction: column;
-   @media(max-width:375px){
+   @media(max-width:768px){
     flex-direction: row-reverse;
     justify-content: space-between;
     border-bottom: 1px solid #fff;
@@ -643,7 +643,7 @@ textarea{
 .mid{
     padding-bottom: 32px;
     border-bottom: 1px solid #fff;
-    @media(max-width:375px){
+    @media(max-width:768px){
         border-bottom: 0px;
     }
 }
@@ -651,10 +651,10 @@ textarea{
     display: flex;
     justify-content: space-between;
     padding: 32px 0px;
-    @media(max-width:768px){
+    /* @media(max-width:768px){
         padding-bottom: 40px;
-    }
-    @media(max-width:375px){
+    } */
+    @media(max-width:768px){
         flex-direction: column;
         justify-content: flex-start;
         padding-top: 16px;
@@ -663,7 +663,7 @@ textarea{
 }
 .policy{
     display: flex;
-    @media(max-width:375px){
+    @media(max-width:768px){
         flex-direction: column;
     }
 }
@@ -672,42 +672,42 @@ textarea{
     flex-direction: column;
 }
 .wh-40{
-    @media(max-width:768px){
+    /* @media(max-width:768px){
       width: 40px;
       height: 40px;
-    }
+    } */
 }
 .md-mr-16{
-    @media(max-width:768px){
+    /* @media(max-width:768px){
         margin-right: 16px;
-    }
+    } */
 }
 .sm-wh-24{
-    @media(max-width:375px){
+    @media(max-width:768px){
         width: 24px;
         height: 24px;
     }
     
 }
 .sm-fs-16{
-    @media(max-width:375px){
+    @media(max-width:768px){
         font-size: 16px;
     }
 }
 .sm-mr-8{
-    @media(max-width:375px){
+    @media(max-width:768px){
         margin-right: 8px;
     }
 }
 .sm-mb-8{
-    @media(max-width:375px){
+    @media(max-width:768px){
         margin-bottom: 8px;
     }
 }
 .material-icons-outlined{
     font-size: 48px;
     color: #fff;
-    @media(max-width:375px){
+    @media(max-width:768px){
        font-size: 24px;
     }
 }
